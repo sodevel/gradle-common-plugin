@@ -161,3 +161,17 @@ githubRelease {
     """.trimMargin()
     }
 }
+
+publishing {
+    repositories {
+        maven {
+            val snapshotsRepoUrl = project.property("enterpriseRepositorySnapshots").toString()
+            val releasesRepoUrl = project.property("enterpriseRepositoryReleases").toString()
+            url = uri(if (project.version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
+            credentials {
+                username = project.findProperty("enterpriseRepositoryUser")?.toString()
+                password = project.findProperty("enterpriseRepositoryPassword")?.toString()
+            }
+        }
+    }
+}
