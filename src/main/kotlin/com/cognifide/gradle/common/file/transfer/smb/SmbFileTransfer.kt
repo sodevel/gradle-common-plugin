@@ -105,6 +105,7 @@ class SmbFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
     fun file(dirUrl: String, fileName: String): SmbFile {
         val dirUrlNormalized = StringUtils.appendIfMissing(dirUrl, "/")
         val properties = Properties()
+        properties.setProperty("jcifs.smb.client.disableSMB1", "true")
         val configuration = PropertyConfiguration(properties)
         val context =
             if (!user.orNull.isNullOrBlank() && !password.orNull.isNullOrBlank())
