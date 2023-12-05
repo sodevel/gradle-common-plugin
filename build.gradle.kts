@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("java-gradle-plugin")
     id("maven-publish")
-    id("org.jetbrains.kotlin.jvm") version "1.6.21"
+    id("org.jetbrains.kotlin.jvm") version "1.8.22"
     id("com.gradle.plugin-publish") version "1.0.0"
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
     id("net.researchgate.release") version "3.0.2"
