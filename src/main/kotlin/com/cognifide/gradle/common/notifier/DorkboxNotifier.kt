@@ -17,7 +17,7 @@ class DorkboxNotifier(val facade: NotifierFacade, val configurer: Notify.() -> U
     override fun notify(title: String, text: String, level: LogLevel, onClick: (Notify) -> Unit) {
         try {
             Notify.create().apply {
-                text(DORKBOX_DARK_LIGHT_THEME)
+                theme(DORKBOX_DARK_LIGHT_THEME)
                 hideAfter(TimeUnit.SECONDS.toMillis(DORKBOX_HIDE_AFTER_SECONDS).toInt())
                 assignImage(level)
 
@@ -25,7 +25,7 @@ class DorkboxNotifier(val facade: NotifierFacade, val configurer: Notify.() -> U
 
                 title(title)
                 text(StringUtils.replace(text, "\n", "<br>"))
-                onAction(onClick)
+                onClickAction(onClick)
 
                 show()
             }

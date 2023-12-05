@@ -2,9 +2,9 @@ package com.cognifide.gradle.common.build
 
 import com.cognifide.gradle.common.utils.Formats
 import com.cognifide.gradle.common.utils.toUpperSnakeCase
-import com.mitchellbosecke.pebble.PebbleEngine
-import com.mitchellbosecke.pebble.lexer.Syntax
-import com.mitchellbosecke.pebble.loader.StringLoader
+import io.pebbletemplates.pebble.PebbleEngine
+import io.pebbletemplates.pebble.lexer.Syntax
+import io.pebbletemplates.pebble.loader.StringLoader
 import org.gradle.api.Project
 import java.io.File
 import java.io.IOException

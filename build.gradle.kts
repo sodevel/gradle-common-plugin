@@ -5,7 +5,7 @@ plugins {
     id("maven-publish")
     id("org.jetbrains.kotlin.jvm") version "1.8.22"
     id("com.gradle.plugin-publish") version "1.0.0"
-    id("io.gitlab.arturbosch.detekt") version "1.21.0"
+    id("io.gitlab.arturbosch.detekt") version "1.23.4"
     id("net.researchgate.release") version "3.0.2"
     id("com.github.breadmoirai.github-release") version "2.4.1"
 }
@@ -48,25 +48,25 @@ dependencies {
     // Build environment
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.4")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
 
     // External dependencies
-    implementation("org.apache.commons:commons-lang3:3.12.0")
-    implementation("org.apache.sshd:sshd-sftp:2.8.0")
-    implementation("org.apache.httpcomponents:httpclient:4.5.13")
-    implementation("org.apache.httpcomponents:httpmime:4.5.13")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.1")
+    implementation("org.apache.commons:commons-lang3:3.14.0")
+    implementation("org.apache.sshd:sshd-sftp:2.11.0")
+    implementation("org.apache.httpcomponents.client5:httpclient5:5.2.3")
+    implementation("org.apache.httpcomponents:httpmime:4.5.14")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.3")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.3")
 
-    implementation("org.codelibs:jcifs:2.1.35")
-    implementation("org.jsoup:jsoup:1.14.3")
-    implementation("commons-io:commons-io:2.11.0")
-    implementation("io.pebbletemplates:pebble:3.1.5")
-    implementation("com.dorkbox:Notify:3.7")
-    implementation("net.lingala.zip4j:zip4j:2.9.1")
-    implementation("org.buildobjects:jproc:2.8.0")
+    implementation("org.codelibs:jcifs:2.1.37")
+    implementation("org.jsoup:jsoup:1.17.1")
+    implementation("commons-io:commons-io:2.15.1")
+    implementation("io.pebbletemplates:pebble:3.2.2")
+    implementation("com.dorkbox:Notify:4.4")
+    implementation("net.lingala.zip4j:zip4j:2.11.5")
+    implementation("org.buildobjects:jproc:2.8.2")
 }
 
 val functionalTestSourceSet = sourceSets.create("functionalTest")
