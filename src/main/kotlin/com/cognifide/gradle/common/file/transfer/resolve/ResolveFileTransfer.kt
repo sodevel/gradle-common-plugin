@@ -6,6 +6,7 @@ import com.cognifide.gradle.common.file.transfer.ProtocolFileTransfer
 import java.io.File
 
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class ResolveFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
 
     override val name = NAME

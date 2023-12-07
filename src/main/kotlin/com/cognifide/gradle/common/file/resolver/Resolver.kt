@@ -14,6 +14,7 @@ import java.io.File
 /**
  * File downloader with groups supporting files from multiple sources: local and remote (SFTP, SMB, HTTP).
  */
+@ExperimentalStdlibApi
 @Suppress("TooManyFunctions")
 abstract class Resolver<G : FileGroup>(val common: CommonExtension) {
 

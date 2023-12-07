@@ -10,6 +10,7 @@ import com.cognifide.gradle.common.file.transfer.smb.SmbFileTransfer
  *
  * Useful in task scripting to communicate with multiple remote servers.
  */
+@ExperimentalStdlibApi
 class FileTransferFactory(private val common: CommonExtension) {
 
     fun <T> http(options: HttpFileTransfer.() -> T) = HttpFileTransfer(common).run(options)

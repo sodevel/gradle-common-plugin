@@ -6,6 +6,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 
+@ExperimentalStdlibApi
 class FileDownloader(private val common: CommonExtension) {
 
     private var processedBytes: Long = 0

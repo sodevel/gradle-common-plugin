@@ -41,6 +41,7 @@ import java.nio.charset.StandardCharsets
 import java.util.*
 
 @Suppress("TooManyFunctions")
+@ExperimentalStdlibApi
 open class HttpClient(private val common: CommonExtension) {
 
     private val logger = common.logger

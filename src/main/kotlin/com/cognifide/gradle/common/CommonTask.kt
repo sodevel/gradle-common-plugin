@@ -4,6 +4,7 @@ import org.gradle.api.Task
 import org.gradle.api.execution.TaskExecutionGraph
 import org.gradle.api.tasks.Internal
 
+@ExperimentalStdlibApi
 interface CommonTask : Task {
 
     @get:Internal

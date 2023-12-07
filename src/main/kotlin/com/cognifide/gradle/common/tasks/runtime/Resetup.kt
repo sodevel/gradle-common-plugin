@@ -2,6 +2,7 @@ package com.cognifide.gradle.common.tasks.runtime
 
 import com.cognifide.gradle.common.RuntimeDefaultTask
 
+@ExperimentalStdlibApi
 open class Resetup : RuntimeDefaultTask() {
 
     init {

@@ -35,6 +35,7 @@ import org.gradle.api.provider.Provider
 import org.gradle.api.tasks.TaskProvider
 import java.io.File
 
+@ExperimentalStdlibApi
 @Suppress("TooManyFunctions")
 open class CommonExtension(val project: Project) {
 
@@ -288,6 +289,7 @@ open class CommonExtension(val project: Project) {
 
     val buildScope = BuildScope.of(project)
 
+    @ExperimentalStdlibApi
     companion object {
 
         const val NAME = "common"
@@ -305,6 +307,7 @@ open class CommonExtension(val project: Project) {
     }
 }
 
+@ExperimentalStdlibApi
 val Project.common get() = CommonExtension.of(project)
 
 @Synchronized
@@ -340,6 +343,7 @@ fun <T : Task> Project.whenGraphReady(task: TaskProvider<T>, configurer: T.(Task
     }
 }
 
+@ExperimentalStdlibApi
 fun <T : Task> Project.checkForce(task: TaskProvider<T>) = whenGraphReady(task) {
     if (!common.prop.force) {
         throw CommonException("Unable to run unsafe task '$path' without param '-P${PropertyParser.FORCE_PROP}'!")

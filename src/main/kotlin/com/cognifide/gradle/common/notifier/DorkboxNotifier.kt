@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit
 import javax.imageio.ImageIO
 
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class DorkboxNotifier(val facade: NotifierFacade, val configurer: Notify.() -> Unit) : Notifier {
 
     private val common = facade.common

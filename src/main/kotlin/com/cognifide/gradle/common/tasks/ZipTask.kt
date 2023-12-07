@@ -8,6 +8,7 @@ import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.bundling.Zip
 
+@ExperimentalStdlibApi
 open class ZipTask : Zip(), CommonTask {
 
     @Internal

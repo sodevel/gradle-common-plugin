@@ -5,6 +5,7 @@ import org.apache.tools.ant.filters.ChainableReader
 import org.gradle.api.file.ContentFilterable
 import java.io.Reader
 
+@ExperimentalStdlibApi
 class FileContentReader(input: Reader) : BaseFilterReader(input), ChainableReader {
 
     private var index: Int = 0

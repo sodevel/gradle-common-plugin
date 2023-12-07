@@ -4,6 +4,7 @@ import com.cognifide.gradle.common.tasks.TaskFacade
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
+@ExperimentalStdlibApi
 abstract class CommonDefaultPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {

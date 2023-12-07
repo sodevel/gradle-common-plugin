@@ -7,6 +7,7 @@ import com.cognifide.gradle.common.utils.using
 import java.io.File
 
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class HttpFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
 
     internal var client = HttpClient(common)

@@ -11,6 +11,7 @@ import org.apache.http.client.methods.HttpRequestBase
 import java.util.*
 import java.util.concurrent.TimeUnit
 
+@ExperimentalStdlibApi
 class HealthChecker(val common: CommonExtension) {
 
     private val logger = common.logger

@@ -8,6 +8,7 @@ import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.bundling.Jar
 
+@ExperimentalStdlibApi
 open class JarTask : Jar(), CommonTask {
 
     @Internal

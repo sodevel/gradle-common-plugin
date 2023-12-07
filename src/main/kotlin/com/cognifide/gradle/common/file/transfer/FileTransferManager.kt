@@ -20,6 +20,7 @@ import java.io.File
  * Prevents unnecessary download if file on local server already exist.
  * Prevents unnecessary uploads if file on remote servers already exist.
  */
+@ExperimentalStdlibApi
 class FileTransferManager(private val common: CommonExtension) : FileTransfer {
 
     private val logger = common.project.logger

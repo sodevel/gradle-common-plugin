@@ -1,5 +1,6 @@
 package com.cognifide.gradle.common.build
 
+@ExperimentalStdlibApi
 class PropertyGroup(val parser: PropertyParser, val group: String, val member: String) {
 
     fun string(prop: String) = parser.string("$group.$member.$prop") ?: parser.string("$group.$DEFAULT.$prop")

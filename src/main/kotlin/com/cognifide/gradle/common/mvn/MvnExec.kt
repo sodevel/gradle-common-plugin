@@ -4,6 +4,7 @@ import com.cognifide.gradle.common.CommonDefaultTask
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 
+@ExperimentalStdlibApi
 open class MvnExec : CommonDefaultTask() {
 
     @Internal

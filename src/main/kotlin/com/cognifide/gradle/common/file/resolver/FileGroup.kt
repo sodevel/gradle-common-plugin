@@ -2,6 +2,7 @@ package com.cognifide.gradle.common.file.resolver
 
 import java.io.File
 
+@ExperimentalStdlibApi
 open class FileGroup(val resolver: Resolver<FileGroup>, val name: String) {
 
     private val _resolutions = mutableListOf<FileResolution>()

@@ -11,6 +11,7 @@ import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.testing.Test
 import org.gradle.language.base.plugins.LifecycleBasePlugin
 
+@ExperimentalStdlibApi
 class TaskFacade(val project: Project) {
 
     val tests get() = getAll<Test>()

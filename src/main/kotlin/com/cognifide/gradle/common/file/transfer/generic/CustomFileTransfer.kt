@@ -11,6 +11,7 @@ import java.io.File
  * Allows to implement file transfer supporting cloud storage like Amazon S3, Google Cloud Storage etc
  * and use them for uploading, downloading and listing files.
  */
+@ExperimentalStdlibApi
 class CustomFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
 
     override lateinit var name: String

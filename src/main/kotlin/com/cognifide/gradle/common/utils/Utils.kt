@@ -2,6 +2,7 @@ package com.cognifide.gradle.common.utils
 
 import java.util.*
 
+@ExperimentalStdlibApi
 object Utils {
 
     fun mapOfNonNullValues(vararg entries: Pair<String, String?>): Map<String, String> {
@@ -21,14 +22,18 @@ object Utils {
     }
 }
 
+@ExperimentalStdlibApi
 fun <T> Iterable<T>.onEachApply(block: T.() -> Unit): Iterable<T> {
     return this.onEach { it.apply(block) }
 }
 
+@ExperimentalStdlibApi
 fun <T> T.using(block: T.() -> Unit) {
     with(this, block)
 }
 
+@ExperimentalStdlibApi
 fun String.capitalizeChar() = this.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 
+@ExperimentalStdlibApi
 fun String.decapitalizeChar() = this.replaceFirstChar { it.lowercase(Locale.getDefault()) }

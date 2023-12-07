@@ -12,6 +12,7 @@ import java.io.File
 import java.util.Properties
 
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class SmbFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
 
     private val logger = common.logger

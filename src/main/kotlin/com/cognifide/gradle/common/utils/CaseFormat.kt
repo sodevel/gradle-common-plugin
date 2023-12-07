@@ -3,6 +3,7 @@ package com.cognifide.gradle.common.utils
 // https://github.com/Fleshgrinder/kotlin-case-format/blob/master/src/main/kotlin/CaseFormat.kt
 
 @Suppress("ComplexMethod")
+@ExperimentalStdlibApi
 private fun formatCamelCase(input: String, ignore: CharArray, upperCase: Boolean): String {
     return if (input.isEmpty()) input else StringBuilder(input.length).also {
         var seenSeparator = upperCase
@@ -39,10 +40,13 @@ private fun formatCamelCase(input: String, ignore: CharArray, upperCase: Boolean
     }.toString()
 }
 
+@ExperimentalStdlibApi
 fun String.toLowerCamelCase(vararg ignore: Char): String = formatCamelCase(this, ignore, false)
+@ExperimentalStdlibApi
 fun String.toUpperCamelCase(vararg ignore: Char): String = formatCamelCase(this, ignore, true)
 
 @Suppress("ComplexMethod")
+@ExperimentalStdlibApi
 private fun formatCase(input: String, separator: Char, ignore: CharArray, upperCase: Boolean): String {
     return if (input.isEmpty()) input else StringBuilder(input.length).also {
         var seenSeparator = true
@@ -81,12 +85,20 @@ private fun formatCase(input: String, separator: Char, ignore: CharArray, upperC
     }.toString()
 }
 
+@ExperimentalStdlibApi
 private fun formatLowerCase(input: String, separator: Char, ignore: CharArray) = formatCase(input, separator, ignore, false)
+@ExperimentalStdlibApi
 private fun formatUpperCase(input: String, separator: Char, ignore: CharArray) = formatCase(input, separator, ignore, true)
 
+@ExperimentalStdlibApi
 fun String.toLowerCaseFormat(separator: Char, vararg ignore: Char) = formatLowerCase(this, separator, ignore)
+@ExperimentalStdlibApi
 fun String.toLowerDashCase(vararg ignore: Char): String = formatLowerCase(this, '-', ignore)
+@ExperimentalStdlibApi
 fun String.toLowerSnakeCase(vararg ignore: Char): String = formatLowerCase(this, '_', ignore)
+@ExperimentalStdlibApi
 fun String.toUpperCaseFormat(separator: Char, vararg ignore: Char) = formatUpperCase(this, separator, ignore)
+@ExperimentalStdlibApi
 fun String.toUpperDashCase(vararg ignore: Char): String = formatUpperCase(this, '-', ignore)
+@ExperimentalStdlibApi
 fun String.toUpperSnakeCase(vararg ignore: Char): String = formatUpperCase(this, '_', ignore)

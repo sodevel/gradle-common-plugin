@@ -3,6 +3,7 @@ package com.cognifide.gradle.common.file.watcher
 import java.io.File
 import java.util.*
 
+@ExperimentalStdlibApi
 class Event(val file: File, val type: EventType) {
 
     override fun toString(): String {

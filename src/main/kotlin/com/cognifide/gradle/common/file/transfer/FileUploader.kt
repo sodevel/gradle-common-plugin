@@ -5,6 +5,7 @@ import com.cognifide.gradle.common.utils.Formats
 import java.io.File
 import java.io.OutputStream
 
+@ExperimentalStdlibApi
 class FileUploader(private val common: CommonExtension) {
 
     private var processedBytes: Long = 0

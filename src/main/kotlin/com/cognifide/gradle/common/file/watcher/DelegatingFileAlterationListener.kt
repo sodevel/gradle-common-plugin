@@ -4,6 +4,7 @@ import org.apache.commons.io.monitor.FileAlterationListener
 import org.apache.commons.io.monitor.FileAlterationObserver
 import java.io.File
 
+@ExperimentalStdlibApi
 class DelegatingFileAlterationListener(private val notify: (Event) -> Unit) : FileAlterationListener {
 
     override fun onFileCreate(file: File) {

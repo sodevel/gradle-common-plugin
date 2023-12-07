@@ -7,6 +7,7 @@ import com.cognifide.gradle.common.utils.Patterns
 import org.apache.commons.io.monitor.FileAlterationMonitor
 import org.apache.commons.io.monitor.FileAlterationObserver
 
+@ExperimentalStdlibApi
 open class FileWatcher(val common: CommonExtension) {
 
     val dirs = common.obj.files()

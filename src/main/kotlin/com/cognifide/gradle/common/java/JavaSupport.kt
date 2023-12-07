@@ -13,6 +13,7 @@ import org.gradle.jvm.toolchain.JavaToolchainService
 import org.gradle.jvm.toolchain.internal.DefaultJavaToolchainService
 import org.gradle.jvm.toolchain.internal.JavaToolchainQueryService
 
+@ExperimentalStdlibApi
 class JavaSupport(private val common: CommonExtension) {
 
     private val logger = common.project.logger

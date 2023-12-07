@@ -5,6 +5,7 @@ import com.cognifide.gradle.common.CommonExtension
 import com.cognifide.gradle.common.utils.Formats
 import kotlin.math.max
 
+@ExperimentalStdlibApi
 class Retry(val common: CommonExtension) {
 
     var times = 1L

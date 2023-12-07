@@ -7,6 +7,7 @@ import java.io.File
 import java.net.URL
 
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class UrlFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
 
     override val name: String get() = NAME

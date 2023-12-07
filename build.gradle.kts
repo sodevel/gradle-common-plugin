@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("java-gradle-plugin")
     id("maven-publish")
-    id("org.jetbrains.kotlin.jvm") version "1.6.21"
+    id("org.jetbrains.kotlin.jvm") version "1.4.32"
     id("com.gradle.plugin-publish") version "1.0.0"
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
     id("net.researchgate.release") version "3.0.2"
@@ -39,6 +39,7 @@ allprojects {
         tasks.withType<KotlinCompile>().configureEach {
             kotlinOptions {
                 jvmTarget = JavaVersion.VERSION_1_8.toString()
+                freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
             }
         }
     }
@@ -48,7 +49,7 @@ dependencies {
     // Build environment
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
 
@@ -57,8 +58,8 @@ dependencies {
     implementation("org.apache.sshd:sshd-sftp:2.8.0")
     implementation("org.apache.httpcomponents:httpclient:4.5.13")
     implementation("org.apache.httpcomponents:httpmime:4.5.13")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
-    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.1")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.7")
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.12.7")
 
     implementation("org.codelibs:jcifs:2.1.35")
     implementation("org.jsoup:jsoup:1.14.3")

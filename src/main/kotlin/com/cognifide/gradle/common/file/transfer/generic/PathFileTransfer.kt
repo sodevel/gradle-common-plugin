@@ -11,6 +11,7 @@ import java.io.IOException
  * File transfer which is copying files instead of using them directly.
  */
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class PathFileTransfer(common: CommonExtension) : AbstractFileTransfer(common) {
 
     override val name: String get() = NAME

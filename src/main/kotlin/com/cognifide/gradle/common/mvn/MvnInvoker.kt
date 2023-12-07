@@ -5,6 +5,7 @@ import org.gradle.internal.os.OperatingSystem
 import org.gradle.process.ExecSpec
 import java.io.File
 
+@ExperimentalStdlibApi
 class MvnInvoker(private val common: CommonExtension) {
 
     val workingDir = common.obj.dir() {

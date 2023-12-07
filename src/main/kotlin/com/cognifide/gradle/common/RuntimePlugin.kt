@@ -3,6 +3,7 @@ package com.cognifide.gradle.common
 import com.cognifide.gradle.common.tasks.runtime.*
 import org.gradle.api.Project
 
+@ExperimentalStdlibApi
 class RuntimePlugin : CommonDefaultPlugin() {
 
     override fun Project.configureProject() {

@@ -3,6 +3,7 @@ package com.cognifide.gradle.common.file.resolver
 import org.gradle.api.file.FileTree
 import java.io.File
 
+@ExperimentalStdlibApi
 open class FileResolution(val group: FileGroup, val id: String, private val resolver: (FileResolution) -> File) {
 
     private val common = group.resolver.common

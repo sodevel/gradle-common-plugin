@@ -13,6 +13,7 @@ import org.apache.sshd.sftp.common.SftpException
 import java.io.File
 
 @Suppress("TooGenericExceptionCaught")
+@ExperimentalStdlibApi
 class SftpFileTransfer(common: CommonExtension) : ProtocolFileTransfer(common) {
 
     val user = common.obj.string {

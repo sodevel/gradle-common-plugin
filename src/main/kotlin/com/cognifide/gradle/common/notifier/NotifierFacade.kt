@@ -8,6 +8,7 @@ import org.gradle.api.BuildCancelledException
 import org.gradle.api.logging.LogLevel
 import org.gradle.internal.os.OperatingSystem
 
+@ExperimentalStdlibApi
 class NotifierFacade private constructor(val common: CommonExtension) {
 
     private val rootProjectDir = common.project.rootProject.layout.projectDirectory
